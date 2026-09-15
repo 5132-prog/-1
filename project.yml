@@ -1,0 +1,31 @@
+name: RuZhInterpreter
+
+options:
+  bundleIdPrefix: com.ruzh
+  deploymentTarget:
+    iOS: "18.0"
+  createIntermediateGroups: true
+
+targets:
+  RuZhInterpreter:
+    type: application
+    platform: iOS
+    sources:
+      - path: RuZhInterpreter
+    info:
+      path: RuZhInterpreter/Info.plist
+      properties:
+        CFBundleDisplayName: 俄语同传
+        UILaunchScreen: {}
+        NSMicrophoneUsageDescription: 需要访问麦克风来采集俄语语音进行实时识别。
+        NSSpeechRecognitionUsageDescription: 需要语音识别权限来把俄语实时转写成文字。
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ruzh.interpreter
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1"
+        GENERATE_INFOPLIST_FILE: "YES"
